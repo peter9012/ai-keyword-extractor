@@ -1,9 +1,9 @@
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>My App</h1>
+    </>
   )
 }
 
