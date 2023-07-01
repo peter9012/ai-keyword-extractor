@@ -7,7 +7,6 @@ const TextInput = () => {
   const toast = useToast();
   
   const submitText = () => {
-    
   };
 
   return (
