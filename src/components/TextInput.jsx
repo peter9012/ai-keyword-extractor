@@ -15,7 +15,6 @@ const TextInput = () => {
         duration: 5000,
         isClosable: false,
       });
-      return;
     }
   };
 
