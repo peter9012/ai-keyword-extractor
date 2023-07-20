@@ -5,6 +5,8 @@ import Footer from "./components/Footer"
 import TextInput from './components/TextInput';
 
 const App = () => {
+  const [keywords, setKeywords] = useState('');
+  
   const extractKeywords = (text) => {
     console.log(text);
   }
