@@ -29,9 +29,19 @@ const App = () => {
         max_tokens: 60,
         top_p: 1.0,
         frequency_penalty: 0.8,
-        presence_penalty: 0.0,
       }),
     }
+
+    const response = await fetch(
+      import.meta.env.VITE_OPENAI_API_URL,
+      options
+    );
+
+    const json = await response.json();
+    const data = json.choices[0].text.trim()
+    console.log(data);
+    setKeywords(data);
+    setLoading(false);
   };
 
   return (
