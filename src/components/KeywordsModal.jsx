@@ -11,6 +11,7 @@ import {
   CircularProgress,
 } from '@chakra-ui/react';
 
+// eslint-disable-next-line react/prop-types
 const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
   return (
     <>
