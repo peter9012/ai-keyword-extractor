@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import TextInput from './components/TextInput';
+import KeywordsModal from './components/KeywordsModal';
 
 const App = () => {
   const [keywords, setKeywords] = useState('');
@@ -44,6 +45,10 @@ const App = () => {
     setLoading(false);
   };
 
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Box bg='blue.600' color='white' height='100vh' paddingTop={130}>
       <Container maxW='3xl' centerContent>
@@ -51,6 +56,12 @@ const App = () => {
         <TextInput extractKeywords={extractKeywords} />
         <Footer />
       </Container>
+      <KeywordsModal
+        keywords={keywords}
+        loading={loading}
+        isOpen={isOpen}
+        closeModal={closeModal}
+      />
     </Box>
   )
 }
